@@ -1,0 +1,39 @@
+.heading{
+    padding: 0px 20px;
+    font-size: 20px;
+}
+.calendar{
+    margin-left: 90%;
+padding: 50px 160px;
+opacity: 0.4;
+}
+.calmob
+{
+ padding:0px 30px;
+ opacity: 0.4;
+}
+.start{
+    padding-left: 5px;
+font-size: 15px;
+}
+.end{
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.startt{
+    padding-left: 5px;
+font-size: 15px;
+}
+.endd{
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+mat-tool-bar{
+    overflow-x: hidden;
+    scrollbar-width: none; 
+}
+.material-icons{
+size: 5px;
+}

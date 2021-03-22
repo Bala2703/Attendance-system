@@ -1,0 +1,69 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayoutAlign="space-between center">
+        <div fxLayout="row">
+            <a routerLink=''routerLinkActive='active' mat-button>
+                <span class="heading">ATTENDANCE  SYSTEM</span>
+            </a>
+            
+        </div>
+        <div>
+            <!-- <a routerLink='/total_time' routerLinkActive="active" mat-icon-button> -->
+                <button *ngIf="!deviceXs" mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+
+  
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="openDialog()">TOTAL HOURS</button>
+
+
+
+     <!-- <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="rangePicker" [formGroup]="range">
+          <input matStartDate placeholder="Start date" formControlName="start">
+          <input matEndDate placeholder="End date" formControlName="end">
+        </mat-date-range-input>
+        <mat-datepicker-toggle  matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+        <mat-date-range-picker touchUi #rangePicker>
+          <mat-date-range-picker-actions>
+            <button mat-button matDateRangePickerCancel>Cancel</button>
+            <button (click)="onSelect(range.value.start,range.value.end)"mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+          </mat-date-range-picker-actions>
+        </mat-date-range-picker>
+      </mat-form-field>  -->
+    </mat-menu>
+
+                <!-- <mat-icon *ngIf="deviceXs">menu</mat-icon> -->
+                <button *ngIf="deviceXs" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+                <mat-menu #menu="matMenu">
+                  
+                </mat-menu>
+                <!-- <span *ngIf="!deviceXs">TOTAL</span> -->
+            <!-- </a> -->
+        </div>
+       
+    </mat-toolbar-row>
+
+<!-- 
+    <mat-toolbar-row *ngIf="deviceXs">
+        <div class="calmob" *ngIf="deviceXs">
+            <mat-form-field appearance="fill">
+                <mat-label>Date Range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input class="start" matStartDate placeholder="Start date">
+                  <input class="end" matEndDate placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+              </mat-form-field>
+        </div>
+    </mat-toolbar-row> -->
+</mat-toolbar>
+<!-- <textarea rows="4" [(ngModel)]="enteredValue"></textarea>
+<hr>
+<button (click)="get()">Search</button>
+
+<p>{{newpost | json }}</p> -->
+
+<app-maincontent [deviceXs]="deviceXs"></app-maincontent>
