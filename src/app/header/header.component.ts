@@ -29,8 +29,8 @@ export class HeaderComponent  {
     ,private route:Router,public dialog: MatDialog) { }
 
 
-  openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
+  openDialog():void {
+   const dialogRef =  this.dialog.open(DialogElementsExampleDialog);
   }
   
 enteredValue:any;
@@ -56,7 +56,7 @@ export class DialogElementsExampleDialog implements OnInit {
 
 dataSource:any;
 value = '';
-  dialogRef: any;
+  // dialogRef: any;
   enteredValue:any;
   newpost:any
  
@@ -152,9 +152,7 @@ value = '';
   
   };
 
-  onNoClick(): void {
-    this.dialogRef.close();
-};  
+  
 
 get(){
 }
